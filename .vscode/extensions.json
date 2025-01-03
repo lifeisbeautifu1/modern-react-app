@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "webben.browserslist",
+    "pkief.material-icon-theme",
+    "csstools.postcss",
+    "wayou.vscode-todo-highlight",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "mkxml.vscode-filesize",
+    "orta.vscode-jest",
+    "ritwickdey.liveserver",
+    "ms-playwright.playwright",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "stylelint.vscode-stylelint",
+    "vitest.explorer",
+    "davidanson.vscode-markdownlint",
+    "valentjn.vscode-ltex"
+  ]
+}
