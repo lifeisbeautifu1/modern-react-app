@@ -1,19 +1,18 @@
-import { useState } from "react";
+import { Suspense, lazy } from "react";
+import { Routes, Route } from "react-router";
+
+const Home = lazy(() => import("./pages/home"));
+const About = lazy(() => import("./pages/about"));
+const NotFound = lazy(() => import("./pages/404"));
 
 export function App() {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    setCount((previous) => previous + 1);
-  };
-
   return (
-    <section>
-      <h1>Hello world!</h1>
-      <p>This is a website on the internet</p>
-      <button type="button" onClick={increment}>
-        Count is {count}
-      </button>
-    </section>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 }
