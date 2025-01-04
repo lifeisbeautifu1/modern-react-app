@@ -7,7 +7,7 @@ const NotFound = lazy(() => import("./pages/404"));
 
 export function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
