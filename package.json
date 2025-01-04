@@ -1,14 +1,41 @@
 {
   "name": "modern-react-app",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
+    "preview": "vite preview",
     "lint:css": "stylelint --quiet --formatter=verbose \"./src/**/*.css\"",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:js": "eslint . --max-warnings 0",
+    "lint:ts": "tsc -p tsconfig.json",
+    "commit": "cz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run lint:ts",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.css": [
+      "prettier --write",
+      "stylelint --formatter=verbose --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -16,18 +43,24 @@
     "react-router": "^7.1.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.17.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
+    "commitizen": "^4.3.1",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "husky": "^4.0.0",
+    "lint-staged": "^15.3.0",
     "postcss": "^8.4.49",
     "postcss-nested": "^7.0.2",
+    "prettier": "^3.4.2",
     "stylelint": "^16.12.0",
     "stylelint-config-idiomatic-order": "^10.0.0",
     "stylelint-config-standard": "^36.0.1",
