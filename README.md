@@ -12,3 +12,5 @@ The main features of this template:
 - `Eslint` to enforce consistent coding styles and catch potential errors in your JavaScript code.
 - `TypeScript` enhances code quality and maintainability in web development by providing static typing and advanced tooling features.
 - `PostCSS` allows you to transform CSS with plugins, enabling features like autoprefixing, nesting, and custom syntax, enhancing your workflow and code quality.
+- `Browserslist` allows you to specify target browser versions for your project, ensuring compatibility and optimized performance across different environments. (Integrated with eslint, stylelint and babel)
+- `Babel` for transpilation to ensure compatibility with older browsers and to leverage modern JavaScript features through plugins.
