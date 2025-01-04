@@ -14,6 +14,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "declaration": false,
+    "checkJs": true,
 
     /* Linting */
     "strict": true,
@@ -22,5 +23,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "vite.config.ts", "eslint.config.js"]
 }
