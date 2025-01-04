@@ -8,3 +8,7 @@ The main features of this template:
 
 - Editor config - for human-readable line length, consistent space indentations and end of line rules.
 - List of VS Code recommended extensions to enhance web developer experience.
+- `Stylelint` helps maintain consistent and error-free CSS code by enforcing coding standards and catching syntax errors.
+- `Eslint` to enforce consistent coding styles and catch potential errors in your JavaScript code.
+- `TypeScript` enhances code quality and maintainability in web development by providing static typing and advanced tooling features.
+- `PostCSS` allows you to transform CSS with plugins, enabling features like autoprefixing, nesting, and custom syntax, enhancing your workflow and code quality.
