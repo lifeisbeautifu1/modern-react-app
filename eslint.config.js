@@ -8,6 +8,8 @@ import compat from "eslint-plugin-compat";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import eslintPrettier from "eslint-plugin-prettier/recommended";
 import importPlugin from "eslint-plugin-import";
+import testingLibrary from "eslint-plugin-testing-library";
+import vitest from "@vitest/eslint-plugin";
 
 // TODO: add eslint-config-airbnb-base when it will support new flat config for eslint@9.0.0
 // https://github.com/airbnb/javascript/issues/2961
@@ -75,6 +77,14 @@ export default tseslint.config(
       "import/no-deprecated": 1,
       "import/consistent-type-specifier-style": [2, "prefer-top-level"],
       "no-console": 2,
+    },
+  },
+  {
+    files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+    extends: [testingLibrary.configs["flat/react"]],
+    plugins: { vitest },
+    rules: {
+      ...vitest.configs.recommended.rules,
     },
   },
 );

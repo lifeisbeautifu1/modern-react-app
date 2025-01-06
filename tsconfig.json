@@ -24,8 +24,14 @@
     "noUncheckedSideEffectImports": true,
 
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@test-utils": ["./utils/test-utils.tsx"]
     }
   },
-  "include": ["src", "vite.config.ts", "eslint.config.js"]
+  "include": [
+    "src",
+    "vite.config.ts",
+    "eslint.config.js",
+    "utils/test-utils.tsx"
+  ]
 }
