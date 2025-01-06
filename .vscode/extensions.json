@@ -16,6 +16,7 @@
     "stylelint.vscode-stylelint",
     "vitest.explorer",
     "davidanson.vscode-markdownlint",
-    "valentjn.vscode-ltex"
+    "valentjn.vscode-ltex",
+    "github.vscode-github-actions"
   ]
 }
