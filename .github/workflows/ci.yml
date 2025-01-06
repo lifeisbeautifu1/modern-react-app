@@ -5,19 +5,26 @@ on:
     branches: ["master"]
 
 jobs:
-  install:
-    name: Install
+  build:
+    name: Build
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [22.x]
     steps:
-      - name: Checkout code
+      - name: Checkout Commit
         uses: actions/checkout@v4
-
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 22
           cache: "npm"
-      - run: npm ci
+      - name: Install packages
+        run: npm ci
+      - name: Lint css
+        run: npm run lint:css
+      - name: Lint js
+        run: npm run lint:js
+      - name: Lint ts
+        run: npm run lint:ts
+      - name: Tests
+        run: npm run test
+      - name: Build
+        run: npm run build
