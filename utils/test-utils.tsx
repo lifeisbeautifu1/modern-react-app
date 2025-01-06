@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from "react-router";
 import { render } from "@testing-library/react";
 import type { RenderOptions, RenderResult } from "@testing-library/react";
 
+// eslint-disable-next-line
 const AllTheProviders = ({ children }: PropsWithChildren) => {
   return <Router>{children}</Router>;
 };
