@@ -1,6 +1,6 @@
 import { expect, describe, test } from "vitest";
 
-import { render } from "@test-utils";
+import { render } from "@/utils/test-utils";
 import { App } from "@/app";
 
 describe("App component", () => {
