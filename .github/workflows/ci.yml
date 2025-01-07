@@ -38,3 +38,5 @@ jobs:
 
       - name: Lighthouse Benchmarks
         run: npm run lighthouse
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
