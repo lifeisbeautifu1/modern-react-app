@@ -3,5 +3,11 @@ export default {
     upload: {
       target: "temporary-public-storage",
     },
+    assert: {
+      preset: "lighthouse:no-pwa",
+      assertions: {
+        "unused-javascript": "off",
+      },
+    },
   },
 };
