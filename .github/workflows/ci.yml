@@ -36,6 +36,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Testing
+        run: |
+          echo "hello"
+          echo "LHCI_GITHUB_APP_TOKEN = ${{ secrets.LHCI_GITHUB_APP_TOKEN }}"
+
       - name: Lighthouse Benchmarks
         run: npm run lighthouse
         env:
