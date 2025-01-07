@@ -18,6 +18,9 @@ dist-ssr
 # Tests
 coverage
 
+# Lighthouse
+.lighthouseci
+
 # Editor directories and files
 .idea
 .DS_Store
