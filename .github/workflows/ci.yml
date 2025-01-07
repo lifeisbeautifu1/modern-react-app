@@ -37,6 +37,6 @@ jobs:
         run: npm run build
 
       - name: Lighthouse Benchmarks
-        run: lhci autorun
+        run: npx lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
