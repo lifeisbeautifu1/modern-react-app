@@ -1,12 +1,12 @@
-name: CI
+name: Coverage export
 
 on:
-  pull_request:
+  push:
     branches: ["master"]
 
 jobs:
-  build:
-    name: Build
+  coverage:
+    name: coverage
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Commit
@@ -21,17 +21,10 @@ jobs:
       - name: Install packages
         run: npm ci
 
-      - name: Lint css
-        run: npm run lint:css
+      - name: Generate coverage
+        run: npm run coverage
 
-      - name: Lint js
-        run: npm run lint:js
-
-      - name: Lint ts
-        run: npm run lint:ts
-
-      - name: Tests
-        run: npm run test
-
-      - name: Build
-        run: npm run build
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

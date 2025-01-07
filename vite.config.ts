@@ -34,6 +34,7 @@ export default defineConfig({
         "!**/src/main.tsx",
       ],
       provider: "v8",
+      reporter: ["text", "html", "clover", "json", "json-summary"],
     },
   },
 });
