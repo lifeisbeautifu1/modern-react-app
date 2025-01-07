@@ -45,6 +45,10 @@ describe("Button component", () => {
 
     render(<Button ref={refCallback}>Button</Button>);
 
+    const button = screen.getByRole("button");
+
     expect(refCallback).toHaveBeenCalledTimes(1);
+
+    expect(refCallback).toHaveBeenCalledWith(button);
   });
 });
