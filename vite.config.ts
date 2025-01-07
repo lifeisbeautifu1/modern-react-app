@@ -9,6 +9,8 @@ import "dotenv/config";
 export default defineConfig(({ mode }) => {
   const isProduction = mode === "production";
 
+  const isCI = typeof process.env.CI !== "undefined";
+
   return {
     resolve: {
       alias: {
@@ -28,7 +30,7 @@ export default defineConfig(({ mode }) => {
         },
       }),
       codecovVitePlugin({
-        enableBundleAnalysis: isProduction,
+        enableBundleAnalysis: isProduction && isCI,
         bundleName: "@codecov/vite-plugin",
         uploadToken: process.env.CODECOV_TOKEN,
       }),
