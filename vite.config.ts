@@ -1,5 +1,6 @@
 /// <reference types="vitest/config" />
 import { defineConfig } from "vite";
+import { codecovVitePlugin } from "@codecov/vite-plugin";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
@@ -21,6 +22,11 @@ export default defineConfig({
       babel: {
         configFile: true,
       },
+    }),
+    codecovVitePlugin({
+      enableBundleAnalysis: process.env.CODECOV_TOKEN !== undefined,
+      bundleName: "@codecov/vite-plugin",
+      uploadToken: process.env.CODECOV_TOKEN,
     }),
   ],
   test: {
