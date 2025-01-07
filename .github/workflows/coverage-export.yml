@@ -1,6 +1,8 @@
 name: Coverage export
 
 on:
+  pull_request:
+    branches: ["master"]
   push:
     branches: ["master"]
 
