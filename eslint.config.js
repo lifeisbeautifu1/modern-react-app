@@ -14,7 +14,7 @@ import vitest from "@vitest/eslint-plugin";
 // TODO: add eslint-config-airbnb-base when it will support new flat config for eslint@9.0.0
 // https://github.com/airbnb/javascript/issues/2961
 export default tseslint.config(
-  { ignores: ["dist"] },
+  { ignores: ["dist", "coverage"] },
   {
     files: ["**/*.{ts,tsx}"],
     extends: [
