@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout Commit
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -37,12 +35,6 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Testing
-        run: |
-          echo "hello"
-          echo "LHCI_GITHUB_APP_TOKEN = ${{ secrets.LHCI_GITHUB_APP_TOKEN }}"
-          echo "CODECOV_TOKEN = ${{ secrets.CODECOV_TOKEN }}"
 
       - name: Lighthouse Benchmarks
         run: npm run lighthouse

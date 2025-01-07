@@ -5,8 +5,7 @@ export default {
     },
     assert: {
       assertions: {
-        "unused-javascript": "off",
-        "render-blocking-resources": "off",
+        "unused-javascript": ["off", {}],
       },
     },
   },
