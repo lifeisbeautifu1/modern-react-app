@@ -1,10 +1,15 @@
 This PR contains:
 
-- [ ] bugfix
-- [ ] feature
-- [ ] refactor
-- [ ] documentation
-- [ ] other
+- [ ] Feature
+- [ ] Fix
+- [ ] Documentation
+- [ ] Style
+- [ ] Refactor
+- [ ] Performance
+- [ ] Test
+- [ ] Build
+- [ ] CI
+- [ ] Chore
 
 Are tests included?
 
@@ -13,4 +18,4 @@ Are tests included?
 
 ## Description
 
-TODO:
+Pull request description goes here...
