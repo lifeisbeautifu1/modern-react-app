@@ -1,4 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/87b62e2d-fcc2-4a84-b570-ca63bffe66ee/deploy-status)](https://app.netlify.com/sites/modern-react-demo/deploys)
+[![codecov](https://codecov.io/github/lifeisbeautifu1/modern-react-app/graph/badge.svg?token=12ZEPZOBZL)](https://codecov.io/github/lifeisbeautifu1/modern-react-app)
 
 # A modern react app (January 2025 edition)
 
