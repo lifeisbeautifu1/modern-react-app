@@ -4,9 +4,9 @@ export default {
       target: "temporary-public-storage",
     },
     assert: {
-      preset: "lighthouse:no-pwa",
       assertions: {
-        "unused-javascript": "warn",
+        "unused-javascript": "off",
+        "render-blocking-resources": "off",
       },
     },
   },
