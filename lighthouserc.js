@@ -6,7 +6,7 @@ export default {
     assert: {
       preset: "lighthouse:no-pwa",
       assertions: {
-        "unused-javascript": "off",
+        "unused-javascript": "warn",
       },
     },
   },
