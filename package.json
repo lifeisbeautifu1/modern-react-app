@@ -12,6 +12,7 @@
     "lint:ts": "tsc -p tsconfig.json",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
+    "playwright": "playwright test",
     "lighthouse": "lhci autorun"
   },
   "husky": {
@@ -57,10 +58,12 @@
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.17.0",
     "@lhci/cli": "^0.14.0",
+    "@playwright/test": "^1.49.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/eslint-plugin-jsx-a11y": "^6.10.0",
+    "@types/node": "^22.10.5",
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.1",
     "@vitejs/plugin-react": "^4.3.4",
@@ -76,6 +79,7 @@
     "eslint-plugin-compat": "^6.0.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-playwright": "^2.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-hooks": "^5.0.0",

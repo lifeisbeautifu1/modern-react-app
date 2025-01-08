@@ -10,6 +10,7 @@ import eslintPrettier from "eslint-plugin-prettier/recommended";
 import importPlugin from "eslint-plugin-import";
 import testingLibrary from "eslint-plugin-testing-library";
 import vitest from "@vitest/eslint-plugin";
+import playwright from "eslint-plugin-playwright";
 
 // TODO: add eslint-config-airbnb-base when it will support new flat config for eslint@9.0.0
 // https://github.com/airbnb/javascript/issues/2961
@@ -86,5 +87,9 @@ export default tseslint.config(
     rules: {
       ...vitest.configs.recommended.rules,
     },
+  },
+  {
+    files: ["**/*.pw-test.ts"],
+    extends: [playwright.configs["flat/recommended"]],
   },
 );
