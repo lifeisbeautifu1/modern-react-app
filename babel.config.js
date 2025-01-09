@@ -5,7 +5,7 @@ export default {
       {
         modules: false,
         useBuiltIns: "usage",
-        corejs: "3.39.0",
+        corejs: "3.40.0",
       },
     ],
   ],
