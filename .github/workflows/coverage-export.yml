@@ -8,7 +8,7 @@ on:
 
 jobs:
   coverage:
-    name: coverage
+    name: Coverage
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Commit
