@@ -1,6 +1,12 @@
 import type { ReactNode } from "react";
 import { Button } from "@/components";
 import {
+  CallToActionDesktopPng,
+  CallToActionDesktopWebp,
+  CallToActionMobileWebp,
+  CallToActionMobilePng,
+  CallToActionTabletWebp,
+  CallToActionTabletPng,
   HeroImagePng,
   HeroImageWebp,
   ImagePng,
@@ -103,7 +109,7 @@ function List() {
             </picture>
           </div>
           <div className="block mt-4 text-center lg:text-left md:mt-8 lg:mt-16 lg:flex xl:block xl:mt-0">
-            <h2 className="font-black leading-8 md:text-2xl lg:mr-32">
+            <h2 className="font-black leading-8 md:text-2xl lg:mr-32 xl:mr-0">
               Long headline on two lines to turn your visitors into users and
               achieve more
             </h2>
@@ -128,12 +134,62 @@ function List() {
   );
 }
 
+function CTA() {
+  return (
+    <section className="text-white">
+      <div className="h-[500px] relative">
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcSet={CallToActionDesktopWebp}
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1280px)"
+            srcSet={CallToActionDesktopPng}
+            type="image/png"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet={CallToActionTabletWebp}
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet={CallToActionTabletPng}
+            type="image/png"
+          />
+          <source srcSet={CallToActionMobileWebp} type="image/webp" />
+          <img
+            src={CallToActionMobilePng}
+            alt="Room"
+            className="w-full h-full"
+            loading="lazy"
+          />
+        </picture>
+        <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-gradient-to-r from-black">
+          <div className="flex flex-col text-center max-w-60 md:max-w-none lg:max-w-[600px]">
+            <p className="mb-3 font-medium">Tagline</p>
+            <h2 className="text-[28px] md:text-[40px] md:px-16 lg:px-0  leading-[48px] font-black">
+              Long headline to turn your visitors into users
+            </h2>
+            <Button appearance="on-dark" className="self-center mt-3 lg:mt-8">
+              Action
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <>
       <Hero />
       <Features />
       <List />
+      <CTA />
     </>
   );
 }
