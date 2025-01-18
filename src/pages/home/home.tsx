@@ -13,6 +13,7 @@ import {
   ImageWebp,
 } from "@/assets/images";
 import Carousel from "react-multi-carousel";
+import { TESTIMONIALS } from "./constants";
 import "react-multi-carousel/lib/styles.css";
 
 function Hero() {
@@ -167,30 +168,6 @@ export function Testimonial({
   );
 }
 
-export const testimonials = [
-  {
-    fullName: "Name Surname",
-    description: "Description",
-    avatarUrl: "https://avatar.iran.liara.run/public/1",
-    testimonial:
-      "“A testimonial describing what the person thinks about this service, product or startup in general.”",
-  },
-  {
-    fullName: "Name Surname",
-    description: "Description",
-    avatarUrl: "https://avatar.iran.liara.run/public/2",
-    testimonial:
-      "“A testimonial describing what the person thinks about this service, product or startup in general.”",
-  },
-  {
-    fullName: "Name Surname",
-    description: "Description",
-    avatarUrl: "https://avatar.iran.liara.run/public/3",
-    testimonial:
-      "“A testimonial describing what the person thinks about this service, product or startup in general.”",
-  },
-];
-
 export function CustomDot({
   active,
   index,
@@ -204,7 +181,7 @@ export function CustomDot({
     slidesToShow?: number;
   };
 }) {
-  if (carouselState?.slidesToShow === testimonials.length) {
+  if (carouselState?.slidesToShow === TESTIMONIALS.length) {
     return null;
   }
 
@@ -246,7 +223,7 @@ function Testimonials() {
           itemClass="pr-4 last:pr-0 xl:pr-8 xl:last:pr-0"
           customDot={<CustomDot />}
         >
-          {testimonials.map((item, index) => (
+          {TESTIMONIALS.map((item, index) => (
             <Testimonial key={index} {...item} />
           ))}
         </Carousel>

@@ -2,7 +2,8 @@ import { expect, describe, test } from "vitest";
 import { screen } from "@testing-library/react";
 
 import { render } from "@/utils/test-utils";
-import Home, { Testimonial, CustomDot, testimonials } from "@/pages/home";
+import Home, { Testimonial, CustomDot } from "@/pages/home";
+import { TESTIMONIALS } from "./constants";
 
 describe("Home component", () => {
   test("Home component renders without errors", () => {
@@ -39,7 +40,7 @@ describe("CustomDot component", () => {
   });
 
   test("CustomDot if slidesToShow === testimonials.length then we don't render dot", () => {
-    render(<CustomDot carouselState={{ slidesToShow: testimonials.length }} />);
+    render(<CustomDot carouselState={{ slidesToShow: TESTIMONIALS.length }} />);
 
     const dot = screen.queryByRole("button");
 
