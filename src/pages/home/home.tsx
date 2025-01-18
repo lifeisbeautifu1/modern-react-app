@@ -76,7 +76,7 @@ function Features() {
   return (
     <section className="bg-[#f3f3f3]">
       <div className="container">
-        <div className="flex flex-col justify-between gap-0 sm:px-8 lg:py-10 lg:gap-16 lg:flex-row xl:gap-6 lg:px-0 xl:py-16">
+        <div className="flex flex-col justify-between gap-0 sm:px-8 lg:py-10 lg:gap-16 lg:flex-row xl:px-0 xl:gap-6 xl:py-16">
           <Feature
             title="Feature one"
             description="All base UI elements are made using Nested Symbols and shared styles that are logically connected with one another."
@@ -243,7 +243,7 @@ function Testimonials() {
           showDots
           renderDotsOutside
           dotListClass="!relative space-x-3"
-          itemClass="pr-4 xl:pr-8"
+          itemClass="pr-4 last:pr-0 xl:pr-8 xl:last:pr-0"
           customDot={<CustomDot />}
         >
           {testimonials.map((item, index) => (
@@ -257,7 +257,7 @@ function Testimonials() {
 
 function CTA() {
   return (
-    <section className="text-white">
+    <section className="text-white ">
       <div className="h-[500px] relative">
         <picture>
           <source

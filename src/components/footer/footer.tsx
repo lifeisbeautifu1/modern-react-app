@@ -125,6 +125,7 @@ export const Footer = (props: ComponentProps<"footer">) => {
               <h6 className="font-bold">Subscribe</h6>
               <form onSubmit={handleSubmit} className="relative mt-6">
                 <input
+                  name="email"
                   placeholder="Enter email"
                   className="px-6 py-3 rounded-[40px] w-full bg-white/15 placeholder:text-gray-300 focus:outline-none focus:ring-4"
                 />
