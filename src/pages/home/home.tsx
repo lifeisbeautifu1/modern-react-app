@@ -143,7 +143,7 @@ interface TestimonialProps {
   testimonial: string;
 }
 
-function Testimonial({
+export function Testimonial({
   testimonial,
   avatarUrl,
   fullName,
@@ -167,7 +167,7 @@ function Testimonial({
   );
 }
 
-const testimonials = [
+export const testimonials = [
   {
     fullName: "Name Surname",
     description: "Description",
@@ -191,7 +191,7 @@ const testimonials = [
   },
 ];
 
-function CustomDot({
+export function CustomDot({
   active,
   index,
   onClick,
