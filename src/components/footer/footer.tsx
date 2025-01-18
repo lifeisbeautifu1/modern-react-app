@@ -16,7 +16,7 @@ export const Footer = (props: ComponentProps<"footer">) => {
           <div className="md:flex md:justify-between xl:contents">
             <ul className="flex text-left justify-between md:grow gap-[10px] mt-6 xl:mt-0 xl:contents">
               <li className="grow xl:grow-0">
-                <h5 className="text-base font-bold">First column</h5>
+                <h6 className="text-base font-bold">First column</h6>
                 <ul className="flex flex-col gap-2 mt-4">
                   <li>
                     <Link
@@ -57,7 +57,7 @@ export const Footer = (props: ComponentProps<"footer">) => {
                 </ul>
               </li>
               <li className="grow xl:grow-0">
-                <h5 className="text-base font-bold">Second</h5>
+                <h6 className="text-base font-bold">Second</h6>
                 <ul className="flex flex-col gap-2 mt-4">
                   <li>
                     <Link
@@ -89,7 +89,7 @@ export const Footer = (props: ComponentProps<"footer">) => {
                 </ul>
               </li>
               <li className="grow xl:grow-0">
-                <h5 className="text-base font-bold">Third</h5>
+                <h6 className="text-base font-bold">Third</h6>
                 <ul className="flex flex-col gap-2 mt-4">
                   <li>
                     <Link
@@ -132,7 +132,7 @@ export const Footer = (props: ComponentProps<"footer">) => {
                 <button
                   type="submit"
                   aria-label="Submit form"
-                  className="absolute text-white transition right-6 top-[50%] translate-y-[-50%] hover:text-white/80 active:text-white/60 focus-visible:outline-none focus-visible:ring-2"
+                  className="absolute p-8 text-white transition right-0 top-[50%] translate-y-[-50%] hover:text-white/80 active:text-white/60 focus-visible:outline-none focus-visible:ring-2"
                 >
                   <PaperAirplaneIcon className="size-5" />
                 </button>

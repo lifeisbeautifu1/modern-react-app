@@ -159,7 +159,7 @@ function Testimonial({
           className="w-16 h-16 rounded-full"
         />
         <div className="mt-4">
-          <h6 className="text-base font-bold">{fullName}</h6>
+          <h5 className="text-base font-bold">{fullName}</h5>
           <p className="mt-1 text-sm">{description}</p>
         </div>
       </div>
