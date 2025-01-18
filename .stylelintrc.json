@@ -3,6 +3,7 @@
   "plugins": ["stylelint-no-unsupported-browser-features"],
   "rules": {
     "alpha-value-notation": "number",
+    "at-rule-no-unknown": [true, { "ignoreAtRules": ["tailwind"] }],
     "color-function-notation": "legacy",
     "plugin/no-unsupported-browser-features": [
       true,
