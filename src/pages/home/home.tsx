@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactNode, MouseEventHandler } from "react";
 import { Button } from "@/components";
 import {
   CallToActionDesktopPng,
@@ -12,6 +12,8 @@ import {
   ImagePng,
   ImageWebp,
 } from "@/assets/images";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 function Hero() {
   return (
@@ -134,6 +136,125 @@ function List() {
   );
 }
 
+interface TestimonialProps {
+  fullName: string;
+  description: string;
+  avatarUrl: string;
+  testimonial: string;
+}
+
+function Testimonial({
+  testimonial,
+  avatarUrl,
+  fullName,
+  description,
+}: TestimonialProps) {
+  return (
+    <div className="rounded-[8px] bg-gray-200 p-6 h-full flex flex-col justify-between">
+      <p className="text-lg">{testimonial}</p>
+      <div className="mt-14">
+        <img
+          src={avatarUrl}
+          alt={fullName}
+          className="w-16 h-16 rounded-full"
+        />
+        <div className="mt-4">
+          <h6 className="text-base font-bold">{fullName}</h6>
+          <p className="mt-1 text-sm">{description}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const testimonials = [
+  {
+    fullName: "Name Surname",
+    description: "Description",
+    avatarUrl: "https://avatar.iran.liara.run/public/1",
+    testimonial:
+      "“A testimonial describing what the person thinks about this service, product or startup in general.”",
+  },
+  {
+    fullName: "Name Surname",
+    description: "Description",
+    avatarUrl: "https://avatar.iran.liara.run/public/2",
+    testimonial:
+      "“A testimonial describing what the person thinks about this service, product or startup in general.”",
+  },
+  {
+    fullName: "Name Surname",
+    description: "Description",
+    avatarUrl: "https://avatar.iran.liara.run/public/3",
+    testimonial:
+      "“A testimonial describing what the person thinks about this service, product or startup in general.”",
+  },
+];
+
+function CustomDot({
+  active,
+  index,
+  onClick,
+  carouselState,
+}: {
+  active?: boolean;
+  index?: number;
+  onClick?: MouseEventHandler<HTMLElement>;
+  carouselState?: {
+    slidesToShow?: number;
+  };
+}) {
+  if (carouselState?.slidesToShow === testimonials.length) {
+    return null;
+  }
+
+  return (
+    <button
+      onClick={onClick}
+      // @ts-expect-error "God, please forgive me"
+      // eslint-disable-next-line
+      aria-label={`Go to slide ${index + 1}`}
+      className={`mt-8 lg:mt-0 size-5 rounded-full focus-visible:outline-none focus-visible:ring-2 ${active ? "bg-black" : "bg-gray-200"}`}
+    />
+  );
+}
+
+function Testimonials() {
+  return (
+    <section className="bg-white">
+      <div className="container flex flex-col px-6 py-8 lg:py-12 xl:py-24">
+        <Carousel
+          arrows={false}
+          partialVisbile={false}
+          responsive={{
+            desktop: {
+              breakpoint: { min: 1024, max: Infinity },
+              items: 3,
+            },
+            tablet: {
+              breakpoint: { max: 1024, min: 768 },
+              items: 2,
+            },
+            mobile: {
+              breakpoint: { max: 767, min: 0 },
+              items: 1,
+            },
+          }}
+          showDots
+          renderDotsOutside
+          dotListClass="!relative space-x-3"
+          itemClass="pr-4 xl:pr-8"
+          customDot={<CustomDot />}
+        >
+          {testimonials.map((item, index) => (
+            <Testimonial key={index} {...item} />
+          ))}
+        </Carousel>
+      </div>
+    </section>
+  );
+}
+
 function CTA() {
   return (
     <section className="text-white">
@@ -189,6 +310,7 @@ export default function Home() {
       <Hero />
       <Features />
       <List />
+      <Testimonials />
       <CTA />
     </>
   );
