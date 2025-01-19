@@ -20,7 +20,7 @@ function Hero() {
   return (
     <section className="px-6 pb-5 md:py-8 md:px-8 lg:py-16">
       <div className="container">
-        <div className="justify-between block lg:flex">
+        <div className="justify-between block lg:flex lg:gap-12">
           <div className="md:max-w-[630px] lg:max-w-none mx-auto lg:mx-[0] text-center lg:text-left md:pt-3 md:pb-16 lg:py-[70px] w-full lg:w-[490px]">
             <h1 className="text-[40px] md:text-[56px] font-black leading-[48px] md:leading-[60px] tracking-[-1px]">
               Medium length display headline
@@ -40,9 +40,10 @@ function Hero() {
             <picture>
               <source srcSet={HeroImageWebp} type="image/webp" />
               <img
+                fetchPriority="high"
                 src={HeroImagePng}
                 alt="Sofa"
-                className="h-[428px] rounded-xl w-full"
+                className="w-full rounded-xl"
               />
             </picture>
           </div>
@@ -186,13 +187,15 @@ export function CustomDot({
   }
 
   return (
-    <button
-      onClick={onClick}
-      // @ts-expect-error "God, please forgive me"
-      // eslint-disable-next-line
-      aria-label={`Go to slide ${index + 1}`}
-      className={`mt-8 lg:mt-0 size-5 rounded-full focus-visible:outline-none focus-visible:ring-2 ${active ? "bg-black" : "bg-gray-200"}`}
-    />
+    <li>
+      <button
+        onClick={onClick}
+        // @ts-expect-error "God, please forgive me"
+        // eslint-disable-next-line
+        aria-label={`Go to slide ${index + 1}`}
+        className={`mt-8 lg:mt-0 size-5 rounded-full focus-visible:outline-none focus-visible:ring-2 ${active ? "bg-black" : "bg-gray-200"}`}
+      />
+    </li>
   );
 }
 
