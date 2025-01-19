@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Modern React App",
+  "short_name": "modern-react-app",
+  "name": "modern-react-app",
   "icons": [
     {
       "src": "logo16.png",
@@ -33,9 +33,12 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en",
   "display": "standalone",
   "orientation": "natural",
   "theme_color": "#000",
-  "background_color": "#fff"
+  "background_color": "#fff",
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json"
 }

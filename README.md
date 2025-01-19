@@ -1,4 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/87b62e2d-fcc2-4a84-b570-ca63bffe66ee/deploy-status)](https://app.netlify.com/sites/modern-react-demo/deploys)
+[![Build & Test](https://github.com/lifeisbeautifu1/modern-react-app/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/lifeisbeautifu1/modern-react-app/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/github/lifeisbeautifu1/modern-react-app/graph/badge.svg?token=12ZEPZOBZL)](https://codecov.io/github/lifeisbeautifu1/modern-react-app)
 [![Made With Love](https://img.shields.io/badge/Made%20With-Love-red.svg)](https://github.com/lifeisbeautifu1)
 
