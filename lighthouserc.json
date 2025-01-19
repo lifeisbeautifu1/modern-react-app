@@ -1,5 +1,9 @@
 {
   "ci": {
+    "collect": {
+      "staticDistDir": "dist",
+      "url": "http://localhost/"
+    },
     "upload": {
       "target": "temporary-public-storage"
     },
