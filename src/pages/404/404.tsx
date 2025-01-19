@@ -6,7 +6,7 @@ export default function NotFound() {
     <Fragment>
       <title>Modern React App | Not found</title>
       <section>
-        <h1>Not found</h1>
+        <h5>Not found</h5>
         <p>Sorry, but the page you are looking for is not found</p>
         <Link to="/">Back to the main page</Link>
       </section>
