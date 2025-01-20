@@ -43,6 +43,8 @@ function Hero() {
                 fetchPriority="high"
                 src={HeroImagePng}
                 alt="Sofa"
+                width="696"
+                height="499"
                 className="w-full rounded-xl"
               />
             </picture>
@@ -108,6 +110,8 @@ function List() {
               <img
                 src={ImagePng}
                 alt="Shelf"
+                width="696"
+                height="550"
                 className="w-full rounded-xl max-h-[550px] xl:h-[428px]"
               />
             </picture>

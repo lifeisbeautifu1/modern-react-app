@@ -132,7 +132,7 @@ export const Footer = (props: ComponentProps<"footer">) => {
                 <button
                   type="submit"
                   aria-label="Submit form"
-                  className="absolute p-8 text-white transition right-0 top-[50%] translate-y-[-50%] hover:text-white/80 active:text-white/60 focus-visible:outline-none focus-visible:ring-2"
+                  className="absolute p-4 text-white transition right-0 top-[50%] translate-y-[-50%] hover:text-white/80 active:text-white/60 focus-visible:outline-none focus-visible:ring-2"
                 >
                   <PaperAirplaneIcon className="size-5" />
                 </button>
