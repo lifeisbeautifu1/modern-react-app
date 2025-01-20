@@ -7,8 +7,6 @@ import {
   CallToActionMobilePng,
   CallToActionTabletWebp,
   CallToActionTabletPng,
-  HeroImagePng,
-  HeroImageWebp,
   ImagePng,
   ImageWebp,
 } from "@/assets/images";
@@ -20,7 +18,7 @@ function Hero() {
   return (
     <section className="px-6 pb-5 md:py-8 md:px-8 lg:py-16">
       <div className="container">
-        <div className="justify-between block lg:flex">
+        <div className="justify-between block lg:flex lg:gap-12">
           <div className="md:max-w-[630px] lg:max-w-none mx-auto lg:mx-[0] text-center lg:text-left md:pt-3 md:pb-16 lg:py-[70px] w-full lg:w-[490px]">
             <h1 className="text-[40px] md:text-[56px] font-black leading-[48px] md:leading-[60px] tracking-[-1px]">
               Medium length display headline
@@ -38,11 +36,13 @@ function Hero() {
           </div>
           <div className="mt-6 md:mt-0">
             <picture>
-              <source srcSet={HeroImageWebp} type="image/webp" />
+              <source srcSet="/hero-image.webp" type="image/webp" />
               <img
-                src={HeroImagePng}
+                src="/hero-image.png"
                 alt="Sofa"
-                className="h-[428px] rounded-xl w-full"
+                width="696"
+                height="499"
+                className="w-full rounded-xl"
               />
             </picture>
           </div>
@@ -64,7 +64,7 @@ function Feature({ title, description }: FeatureProps) {
     <div className="p-6 sm:py-5 sm:px-0 lg:py-0">
       <div className="flex items-center justify-center lg:justify-start">
         <div className="bg-black rounded-full size-10" />
-        <h3 className="ml-4 text-lg font-bold">{title}</h3>
+        <h2 className="ml-4 text-lg font-bold">{title}</h2>
       </div>
       <p className="text-center lg:text-left mt-[10px] lg:mt-4">
         {description}
@@ -107,15 +107,17 @@ function List() {
               <img
                 src={ImagePng}
                 alt="Shelf"
+                width="696"
+                height="550"
                 className="w-full rounded-xl max-h-[550px] xl:h-[428px]"
               />
             </picture>
           </div>
           <div className="block mt-4 text-center lg:text-left md:mt-8 lg:mt-16 lg:flex xl:block xl:mt-0">
-            <h2 className="font-black leading-8 md:text-2xl lg:mr-32 xl:mr-0">
+            <h3 className="font-black leading-8 md:text-2xl lg:mr-32 xl:mr-0">
               Long headline on two lines to turn your visitors into users and
               achieve more
-            </h2>
+            </h3>
             <div className="mt-4 md:mt-8 lg:mt-0 xl:mt-4">
               <p className="text-sm leading-6 md:text-base">
                 Separated they live in Bookmarks right at the coast of the
@@ -160,7 +162,7 @@ export function Testimonial({
           className="w-16 h-16 rounded-full"
         />
         <div className="mt-4">
-          <h5 className="text-base font-bold">{fullName}</h5>
+          <h4 className="text-base font-bold">{fullName}</h4>
           <p className="mt-1 text-sm">{description}</p>
         </div>
       </div>
@@ -186,13 +188,15 @@ export function CustomDot({
   }
 
   return (
-    <button
-      onClick={onClick}
-      // @ts-expect-error "God, please forgive me"
-      // eslint-disable-next-line
-      aria-label={`Go to slide ${index + 1}`}
-      className={`mt-8 lg:mt-0 size-5 rounded-full focus-visible:outline-none focus-visible:ring-2 ${active ? "bg-black" : "bg-gray-200"}`}
-    />
+    <li>
+      <button
+        onClick={onClick}
+        // @ts-expect-error "God, please forgive me"
+        // eslint-disable-next-line
+        aria-label={`Go to slide ${index + 1}`}
+        className={`mt-8 lg:mt-0 size-5 rounded-full focus-visible:outline-none focus-visible:ring-2 ${active ? "bg-black" : "bg-gray-200"}`}
+      />
+    </li>
   );
 }
 
@@ -268,9 +272,9 @@ function CTA() {
         <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-gradient-to-r from-black">
           <div className="flex flex-col text-center max-w-60 md:max-w-none lg:max-w-[600px]">
             <p className="mb-3 font-medium">Tagline</p>
-            <h2 className="text-[28px] md:text-[40px] md:px-16 lg:px-0  leading-[48px] font-black">
+            <h5 className="text-[28px] md:text-[40px] md:px-16 lg:px-0  leading-[48px] font-black">
               Long headline to turn your visitors into users
-            </h2>
+            </h5>
             <Button appearance="on-dark" className="self-center mt-3 lg:mt-8">
               Action
             </Button>

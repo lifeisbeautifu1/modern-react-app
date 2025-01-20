@@ -1,0 +1,44 @@
+{
+  "short_name": "modern-react-app",
+  "name": "modern-react-app",
+  "icons": [
+    {
+      "src": "logo16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "logo24.png",
+      "type": "image/png",
+      "sizes": "24x24"
+    },
+    {
+      "src": "logo32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "logo64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en",
+  "display": "standalone",
+  "orientation": "natural",
+  "theme_color": "#000",
+  "background_color": "#fff",
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json"
+}

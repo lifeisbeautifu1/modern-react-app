@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test("Home page has correct title", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page).toHaveTitle(/^Website$/);
+  await expect(page).toHaveTitle(/^Modern React App$/);
 });
 
 test("Main page has heading", async ({ page }) => {
@@ -17,7 +17,7 @@ test("Main page has heading", async ({ page }) => {
 test("Shows 404 page", async ({ page }) => {
   await page.goto("/not-found");
 
-  await expect(page).toHaveTitle(/^Website | Not found$/);
+  await expect(page).toHaveTitle(/^Modern React App | Not found$/);
 
   await expect(page.getByRole("heading", { name: "Not found" })).toBeVisible();
 
@@ -31,7 +31,7 @@ test("Shows 404 page", async ({ page }) => {
 test("Can navigate from 404 page back to the main one", async ({ page }) => {
   await page.goto("/not-found");
 
-  await expect(page).toHaveTitle(/^Website | Not found$/);
+  await expect(page).toHaveTitle(/^Modern React App | Not found$/);
 
   await expect(page.getByRole("heading", { name: "Not found" })).toBeVisible();
 
@@ -41,5 +41,5 @@ test("Can navigate from 404 page back to the main one", async ({ page }) => {
     page.getByRole("heading", { name: "Medium length display headline" }),
   ).toBeVisible();
 
-  await expect(page).toHaveTitle(/^Website$/);
+  await expect(page).toHaveTitle(/^Modern React App$/);
 });
