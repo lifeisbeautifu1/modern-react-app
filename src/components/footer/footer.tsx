@@ -57,7 +57,7 @@ export const Footer = (props: ComponentProps<"footer">) => {
                 </ul>
               </li>
               <li className="grow xl:grow-0">
-                <h6 className="text-base font-bold">Second</h6>
+                <h6 className="text-base font-bold">Second column</h6>
                 <ul className="flex flex-col gap-2 mt-4">
                   <li>
                     <Link
@@ -89,7 +89,7 @@ export const Footer = (props: ComponentProps<"footer">) => {
                 </ul>
               </li>
               <li className="grow xl:grow-0">
-                <h6 className="text-base font-bold">Third</h6>
+                <h6 className="text-base font-bold">Third column</h6>
                 <ul className="flex flex-col gap-2 mt-4">
                   <li>
                     <Link
