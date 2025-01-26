@@ -1,1 +1,1 @@
-npx lint-staged && npm run lint:ts
+lint-staged && npm run lint:ts

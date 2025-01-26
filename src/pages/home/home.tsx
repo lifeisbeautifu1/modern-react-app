@@ -7,6 +7,8 @@ import {
   CallToActionMobilePng,
   CallToActionTabletWebp,
   CallToActionTabletPng,
+  HeroImagePng,
+  HeroImageWebp,
   ImagePng,
   ImageWebp,
 } from "@/assets/images";
@@ -36,9 +38,9 @@ function Hero() {
           </div>
           <div className="mt-6 md:mt-0">
             <picture>
-              <source srcSet="/hero-image.webp" type="image/webp" />
+              <source srcSet={HeroImageWebp} type="image/webp" />
               <img
-                src="/hero-image.png"
+                src={HeroImagePng}
                 alt="Sofa"
                 width="696"
                 height="499"
