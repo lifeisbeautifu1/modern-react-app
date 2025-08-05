@@ -20,49 +20,11 @@
       crossorigin="anonymous"
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     />
-    <link
-      rel="preload"
-      crossorigin="anonymous"
-      href="https://fonts.gstatic.com/s/inter/v18/UcCo3FwrK3iLTcviYwY.woff2"
-      as="font"
-    />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#000" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Modern React App" />
     <title>Modern React App</title>
-    <script>
-      function supportsWebP(callback) {
-        const img = new Image();
-        img.onload = function () {
-          callback(true); // WebP is supported
-        };
-        img.onerror = function () {
-          callback(false); // WebP is not supported
-        };
-        img.src =
-          "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAQCdASoBAAEAAQAcJaACdLoB+AAETAAA/vW4f/6aR40jxpHxcP/ugT90CfugT/3NoAAA"; // Small 1x1 pixel WebP image
-      }
-
-      function preloadHeroImage() {
-        const currentPath = window.location.pathname;
-
-        if (currentPath === "/") {
-          supportsWebP(function (supported) {
-            const link = document.createElement("link");
-            link.rel = "preload";
-            link.as = "image";
-            link.href = supported
-              ? "/assets/hero-image-DB82TJ0R.webp"
-              : "/assets/hero-image-DMk18vP8.png"; // Update with your image paths
-            document.head.appendChild(link);
-          });
-        }
-      }
-
-      // Run the preload function when the DOM is fully loaded
-      document.addEventListener("DOMContentLoaded", preloadHeroImage);
-    </script>
   </head>
   <body class="text-base font-normal text-black bg-white">
     <div id="root"></div>
