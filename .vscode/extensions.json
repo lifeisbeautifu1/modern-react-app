@@ -16,7 +16,6 @@
     "stylelint.vscode-stylelint",
     "vitest.explorer",
     "davidanson.vscode-markdownlint",
-    "valentjn.vscode-ltex",
     "github.vscode-github-actions",
     "bradlc.vscode-tailwindcss"
   ]
