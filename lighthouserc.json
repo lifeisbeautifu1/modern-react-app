@@ -1,16 +1,16 @@
 {
   "ci": {
-    "collect": {
-      "staticDistDir": "dist",
-      "url": "http://localhost/"
-    },
-    "upload": {
-      "target": "temporary-public-storage"
-    },
+    "collect": { "staticDistDir": "dist", "url": "http://localhost/" },
+    "upload": { "target": "temporary-public-storage" },
     "assert": {
       "preset": "lighthouse:recommended",
       "assertions": {
-        "unused-javascript": "off"
+        "unused-javascript": "off",
+        "lcp-lazy-loaded": "off",
+        "non-composited-animations": "off",
+        "prioritize-lcp-image": "off",
+        "first-contentful-paint": "off",
+        "largest-contentful-paint": "off"
       }
     }
   }

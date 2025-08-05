@@ -181,9 +181,7 @@ export function CustomDot({
   active?: boolean;
   index?: number;
   onClick?: MouseEventHandler<HTMLElement>;
-  carouselState?: {
-    slidesToShow?: number;
-  };
+  carouselState?: { slidesToShow?: number };
 }) {
   if (carouselState?.slidesToShow === TESTIMONIALS.length) {
     return null;
@@ -210,18 +208,9 @@ function Testimonials() {
           arrows={false}
           partialVisbile={false}
           responsive={{
-            desktop: {
-              breakpoint: { min: 1024, max: Infinity },
-              items: 3,
-            },
-            tablet: {
-              breakpoint: { max: 1024, min: 768 },
-              items: 2,
-            },
-            mobile: {
-              breakpoint: { max: 767, min: 0 },
-              items: 1,
-            },
+            desktop: { breakpoint: { min: 1024, max: Infinity }, items: 3 },
+            tablet: { breakpoint: { max: 1024, min: 768 }, items: 2 },
+            mobile: { breakpoint: { max: 767, min: 0 }, items: 1 },
           }}
           showDots
           renderDotsOutside
