@@ -127,12 +127,12 @@ export const Footer = (props: ComponentProps<"footer">) => {
                 <input
                   name="email"
                   placeholder="Enter email"
-                  className="px-6 py-3 rounded-[40px] w-full bg-white/15 placeholder:text-gray-300 focus:outline-none focus:ring-4"
+                  className="px-6 py-3 rounded-[40px] w-full bg-white/15 placeholder:text-gray-300 focus:outline-hidden focus:ring-4"
                 />
                 <button
                   type="submit"
                   aria-label="Submit form"
-                  className="absolute p-4 text-white transition right-0 top-[50%] translate-y-[-50%] hover:text-white/80 active:text-white/60 focus-visible:outline-none focus-visible:ring-2"
+                  className="absolute p-4 text-white transition right-0 top-[50%] translate-y-[-50%] hover:text-white/80 active:text-white/60 focus-visible:outline-hidden focus-visible:ring-2"
                 >
                   <PaperAirplaneIcon className="size-5" />
                 </button>

@@ -16,7 +16,7 @@ export const Link = ({
     <RouterLink
       {...restProps}
       className={cn(
-        "font-medium transition focus-visible:outline-none focus-visible:ring-2 tracking-[0.1px]",
+        "font-medium transition focus-visible:outline-hidden focus-visible:ring-2 tracking-[0.1px]",
         {
           "text-black hover:text-black/80 active:text-black/60":
             appearance === "on-light",

@@ -194,7 +194,7 @@ export function CustomDot({
         // @ts-expect-error "God, please forgive me"
         // eslint-disable-next-line
         aria-label={`Go to slide ${index + 1}`}
-        className={`mt-8 lg:mt-0 size-5 rounded-full focus-visible:outline-none focus-visible:ring-2 ${active ? "bg-black" : "bg-gray-200"}`}
+        className={`mt-8 lg:mt-0 size-5 rounded-full focus-visible:outline-hidden focus-visible:ring-2 ${active ? "bg-black" : "bg-gray-200"}`}
       />
     </li>
   );
@@ -260,7 +260,7 @@ function CTA() {
             loading="lazy"
           />
         </picture>
-        <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-gradient-to-r from-black">
+        <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-linear-to-r from-black">
           <div className="flex flex-col text-center max-w-60 md:max-w-none lg:max-w-[600px]">
             <p className="mb-3 font-medium">Tagline</p>
             <h5 className="text-[28px] md:text-[40px] md:px-16 lg:px-0  leading-[48px] font-black">
