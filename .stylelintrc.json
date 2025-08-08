@@ -3,7 +3,13 @@
   "plugins": ["stylelint-no-unsupported-browser-features"],
   "rules": {
     "alpha-value-notation": "number",
-    "at-rule-no-unknown": [true, { "ignoreAtRules": ["tailwind"] }],
+    "at-rule-no-deprecated": [
+      true,
+      {
+        "ignoreAtRules": "apply"
+      }
+    ],
+    "at-rule-no-unknown": [true, { "ignoreAtRules": ["tailwind", "utility"] }],
     "color-function-notation": "legacy",
     "plugin/no-unsupported-browser-features": [
       true,
@@ -12,6 +18,7 @@
         "ignorePartialSupport": true,
         "ignore": ["css-nesting"]
       }
-    ]
+    ],
+    "import-notation": "string"
   }
 }

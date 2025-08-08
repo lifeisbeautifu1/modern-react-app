@@ -32,7 +32,7 @@ export const Navbar = (props: ComponentProps<"nav">) => {
       </ul>
       <button
         aria-label="Open navigation menu"
-        className="p-1 text-white transition bg-black rounded-full sm:hidden focus-visible:outline-none focus-visible:ring-2 active:bg-black/80"
+        className="p-1 text-white transition bg-black rounded-full sm:hidden focus-visible:outline-hidden focus-visible:ring-2 active:bg-black/80"
       >
         <Bars3Icon className="size-4" />
       </button>

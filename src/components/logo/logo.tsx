@@ -8,7 +8,7 @@ export const Logo = (props: Partial<ComponentProps<typeof Link>>) => {
       {...props}
       to="/"
       className={cn(
-        "text-2xl font-black uppercase focus-visible:outline-none focus-visible:ring-2",
+        "text-2xl font-black uppercase focus-visible:outline-hidden focus-visible:ring-2",
         props.className,
       )}
     >
