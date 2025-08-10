@@ -1,17 +1,5 @@
 import type { ReactNode, MouseEventHandler } from "react";
 import { Button } from "@/components";
-import {
-  CallToActionDesktopPng,
-  CallToActionDesktopWebp,
-  CallToActionMobileWebp,
-  CallToActionMobilePng,
-  CallToActionTabletWebp,
-  CallToActionTabletPng,
-  HeroImagePng,
-  HeroImageWebp,
-  ImagePng,
-  ImageWebp,
-} from "@/assets/images";
 import Carousel from "react-multi-carousel";
 import { TESTIMONIALS } from "./constants";
 import "react-multi-carousel/lib/styles.css";
@@ -38,9 +26,12 @@ function Hero() {
           </div>
           <div className="mt-6 md:mt-0">
             <picture>
-              <source srcSet={HeroImageWebp} type="image/webp" />
+              <source
+                srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825974/hero-image_qtoh4y.webp"
+                type="image/webp"
+              />
               <img
-                src={HeroImagePng}
+                src="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825975/hero-image_txd0hc.png"
                 alt="Sofa"
                 width="696"
                 height="499"
@@ -105,9 +96,12 @@ function List() {
         <div className="block p-6 lg:p-8 xl:py-24 xl:px-0 xl:flex xl:items-center">
           <div className="shrink-0 xl:mr-32">
             <picture>
-              <source srcSet={ImageWebp} type="image/webp" />
+              <source
+                srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825978/image_ln2lnr.webp"
+                type="image/webp"
+              />
               <img
-                src={ImagePng}
+                src="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825979/image_lfeqpm.png"
                 alt="Shelf"
                 width="696"
                 height="550"
@@ -234,27 +228,30 @@ function CTA() {
         <picture>
           <source
             media="(min-width: 1280px)"
-            srcSet={CallToActionDesktopWebp}
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825954/cta-desktop_ubglp0.webp"
             type="image/webp"
           />
           <source
             media="(min-width: 1280px)"
-            srcSet={CallToActionDesktopPng}
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825954/cta-desktop_y7lja7.png"
             type="image/png"
           />
           <source
             media="(min-width: 768px)"
-            srcSet={CallToActionTabletWebp}
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825966/cta-tablet_yxxnfb.webp"
             type="image/webp"
           />
           <source
             media="(min-width: 768px)"
-            srcSet={CallToActionTabletPng}
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825967/cta-tablet_hqbn8k.png"
             type="image/png"
           />
-          <source srcSet={CallToActionMobileWebp} type="image/webp" />
+          <source
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825961/cta-mobile_giobw2.webp"
+            type="image/webp"
+          />
           <img
-            src={CallToActionMobilePng}
+            src="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825961/cta-mobile_bpnmoy.png"
             alt="Room"
             className="w-full h-full"
             loading="lazy"
