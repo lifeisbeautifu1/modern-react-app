@@ -23,9 +23,6 @@ jobs:
           node-version: 22
           cache: "npm"
 
-      - name: will delete
-        run: echo "The value of MY_CUSTOM_VAR is: ${{ env.GH_COMMIT_SHA }}"
-
       - name: Install packages
         run: npm ci
 
