@@ -36,6 +36,7 @@ export default defineConfig(({ mode }) => {
         enableBundleAnalysis: isProduction && isCI,
         bundleName: "@codecov/vite-plugin",
         uploadToken: process.env.CODECOV_TOKEN,
+        telemetry: false,
       }),
       VitePWA({
         registerType: "autoUpdate",
