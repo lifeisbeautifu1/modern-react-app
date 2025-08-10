@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      GH_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout Commit
         uses: actions/checkout@v4
