@@ -27,8 +27,12 @@ function Hero() {
           <div className="mt-6 md:mt-0">
             <picture>
               <source
-                srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825974/hero-image_qtoh4y.webp"
+                srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825975/hero-image_txd0hc.webp"
                 type="image/webp"
+              />
+              <source
+                srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825975/hero-image_txd0hc.jpeg"
+                type="image/jpeg"
               />
               <img
                 src="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825975/hero-image_txd0hc.png"
@@ -100,8 +104,12 @@ function List() {
                 srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825978/image_ln2lnr.webp"
                 type="image/webp"
               />
+              <source
+                srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825978/image_ln2lnr.jpeg"
+                type="image/jpeg"
+              />
               <img
-                src="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825979/image_lfeqpm.png"
+                src="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825978/image_ln2lnr.png"
                 alt="Shelf"
                 width="696"
                 height="550"
@@ -233,7 +241,12 @@ function CTA() {
           />
           <source
             media="(min-width: 1280px)"
-            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825954/cta-desktop_y7lja7.png"
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825954/cta-desktop_ubglp0.jpeg"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 1280px)"
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825954/cta-desktop_ubglp0.png"
             type="image/png"
           />
           <source
@@ -243,15 +256,24 @@ function CTA() {
           />
           <source
             media="(min-width: 768px)"
-            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825967/cta-tablet_hqbn8k.png"
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825966/cta-tablet_yxxnfb.jpeg"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825966/cta-tablet_yxxnfb.png"
             type="image/png"
           />
           <source
             srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825961/cta-mobile_giobw2.webp"
             type="image/webp"
           />
+          <source
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825961/cta-mobile_giobw2.jpeg"
+            type="image/jpeg"
+          />
           <img
-            src="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825961/cta-mobile_bpnmoy.png"
+            src="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754825961/cta-mobile_giobw2.png"
             alt="Room"
             className="w-full h-full"
             loading="lazy"
