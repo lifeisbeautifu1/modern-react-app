@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      GH_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout Commit
         uses: actions/checkout@v4
@@ -21,6 +22,9 @@ jobs:
         with:
           node-version: 22
           cache: "npm"
+
+      - name: will delete
+        run: echo "The value of MY_CUSTOM_VAR is: ${{ env.GH_COMMIT_SHA }}"
 
       - name: Install packages
         run: npm ci
