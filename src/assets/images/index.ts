@@ -1,4 +1,3 @@
-export { default as CallToActionDesktopPng } from "./cta-desktop.png";
 export { default as CallToActionDesktopWebp } from "./cta-desktop.webp";
 export { default as CallToActionMobilePng } from "./cta-mobile.png";
 export { default as CallToActionMobileWebp } from "./cta-mobile.webp";

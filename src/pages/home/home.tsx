@@ -1,7 +1,6 @@
 import type { ReactNode, MouseEventHandler } from "react";
 import { Button } from "@/components";
 import {
-  CallToActionDesktopPng,
   CallToActionDesktopWebp,
   CallToActionMobileWebp,
   CallToActionMobilePng,
@@ -239,7 +238,7 @@ function CTA() {
           />
           <source
             media="(min-width: 1280px)"
-            srcSet={CallToActionDesktopPng}
+            srcSet="https://res.cloudinary.com/dvzjexy5g/image/upload/v1754820092/cta_ssrhtr.png"
             type="image/png"
           />
           <source
