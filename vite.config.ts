@@ -37,9 +37,6 @@ export default defineConfig(({ mode }) => {
         bundleName: "@codecov/vite-plugin",
         uploadToken: process.env.CODECOV_TOKEN,
         telemetry: false,
-        uploadOverrides: {
-          sha: process.env.GH_COMMIT_SHA,
-        },
       }),
       VitePWA({
         registerType: "autoUpdate",
