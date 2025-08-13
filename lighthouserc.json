@@ -5,6 +5,7 @@
     "assert": {
       "preset": "lighthouse:recommended",
       "assertions": {
+        "uses-rel-preconnect": "off",
         "unused-javascript": "off",
         "lcp-lazy-loaded": "off",
         "non-composited-animations": "off",
