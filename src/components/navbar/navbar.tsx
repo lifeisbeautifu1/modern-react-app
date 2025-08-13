@@ -18,10 +18,10 @@ export const Navbar = (props: ComponentProps<"nav">) => {
           <Link to="/">Link 1</Link>
         </li>
         <li>
-          <Link to="/">Link 2</Link>
+          <Link to="/404">Link 2</Link>
         </li>
         <li>
-          <Link to="/">Link 3</Link>
+          <Link to="/error">Link 3</Link>
         </li>
         <li>
           <Link to="/">Link 4</Link>
