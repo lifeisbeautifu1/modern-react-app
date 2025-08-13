@@ -14,6 +14,5 @@ createRoot(document.getElementById("root") as unknown as HTMLElement).render(
     <Router>
       <App />
     </Router>
-    ,
   </StrictMode>,
 );
