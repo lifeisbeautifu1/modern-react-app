@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import { Navbar, Footer } from "@/components";
+import { Navbar, Footer, ErrorBoundary } from "@/components";
 import { usePageView, useDetectBrowserVersion } from "@/hooks";
 
 export const Layout = () => {
@@ -10,7 +10,9 @@ export const Layout = () => {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <ErrorBoundary>
+        <Outlet />
+      </ErrorBoundary>
       <Footer />
     </>
   );
