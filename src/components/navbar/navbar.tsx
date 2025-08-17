@@ -15,13 +15,13 @@ export const Navbar = (props: ComponentProps<"nav">) => {
       <Logo className="text-lg leading-none sm:text-2xl" />
       <ul className="items-center hidden gap-6 sm:flex">
         <li>
-          <Link to="/">Link 1</Link>
+          <Link to="/">Home page</Link>
         </li>
         <li>
-          <Link to="/404">Link 2</Link>
+          <Link to="/404">Not found</Link>
         </li>
         <li>
-          <Link to="/error">Link 3</Link>
+          <Link to="/error">Page with error</Link>
         </li>
         <li>
           <Link to="/">Link 4</Link>
